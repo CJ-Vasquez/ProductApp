@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProductApp</string>
+
+    <!-- MainActivity -->
+    <string name="main_title">Product App</string>
+    <string name="btn_add_product">Agregar Producto</string>
+    <string name="btn_view_products">Ver Lista de Productos</string>
+    <string name="welcome_title">Bienvenido a ProductApp</string>
+    <string name="welcome_subtitle">Gestiona tus productos de manera fácil y eficiente</string>
+    <string name="app_description">Conecta con FakeStore API • Gestión local • Interfaz moderna</string>
+
+    <!-- AddProductActivity -->
+    <string name="add_product_title">Agregar/Editar Producto</string>
+    <string name="hint_title">Título</string>
+    <string name="hint_price">Precio</string>
+    <string name="hint_category">Categoría</string>
+    <string name="hint_description">Descripción</string>
+    <string name="switch_send_api">Enviar a API (opcional)</string>
+    <string name="btn_save">Guardar</string>
+    <string name="error_title_required">Título obligatorio</string>
+    <string name="error_price_invalid">Precio inválido</string>
+    <string name="error_price_greater_zero">Precio debe ser mayor a 0</string>
+    <string name="product_saved">Producto guardado</string>
+    <string name="product_updated">Producto actualizado</string>
+
+    <!-- ProductListActivity -->
+    <string name="products_title">Productos</string>
+    <string name="menu_sync">Sincronizar</string>
+    <string name="fab_add_description">Agregar</string>
+
+    <!-- ProductDetailActivity -->
+    <string name="detail_title">Detalle</string>
+    <string name="btn_edit">Editar</string>
+    <string name="btn_delete">Eliminar</string>
+    <string name="confirm_delete_title">Confirmar</string>
+    <string name="confirm_delete_message">¿Eliminar este producto?</string>
+    <string name="btn_delete_confirm">Eliminar</string>
+    <string name="btn_cancel">Cancelar</string>
+
+    <!-- ViewModel messages -->
+    <string name="product_deleted">Producto eliminado</string>
+    <string name="sync_complete">Sincronización completa</string>
+    <string name="sync_failed">Fallo sincronización: %s</string>
+    <string name="api_updated">Actualizado en API</string>
+    <string name="api_failed_local_ok">Actualizado localmente, fallo API: %s</string>
+    <string name="save_error">Error al guardar: %s</string>
+    <string name="update_error">Error al actualizar: %s</string>
+    <string name="delete_error">Error al eliminar: %s</string>
+    <string name="sync_error">Error sincronizando: %s</string>
+    <string name="room_api_failed">Enviado a Room pero fallo envío a API: %s</string>
+
+    <!-- Price format -->
+    <string name="price_format">$%.2f</string>
+
+    <!-- Form and UI improvements -->
+    <string name="form_description">Completa la información del producto</string>
+    <string name="product_information">Información del Producto</string>
+    <string name="product_list_subtitle">Tus productos guardados</string>
+    <string name="add_product_fab">Agregar</string>
+    <string name="actions_title">Acciones Disponibles</string>
+
+    <!-- Cart System -->
+    <string name="btn_cart">Carrito de Compras</string>
+    <string name="add_to_cart">Agregar al Carrito</string>
+    <string name="cart_title">Mi Carrito</string>
+    <string name="empty_cart_title">Tu carrito está vacío</string>
+    <string name="empty_cart_message">Agrega productos para continuar con tu compra</string>
+    <string name="btn_continue_shopping">Continuar Comprando</string>
+    <string name="subtotal">Subtotal:</string>
+    <string name="tax">IGV (18%):</string>
+    <string name="total">Total:</string>
+    <string name="quantity">Cantidad:</string>
+    <string name="btn_proceed_checkout">Proceder al Checkout</string>
+    <string name="btn_clear_cart">Limpiar Carrito</string>
+    <string name="clear_cart_title">Limpiar Carrito</string>
+    <string name="clear_cart_message">¿Estás seguro de eliminar todos los productos?</string>
+    <string name="btn_clear">Limpiar</string>
+
+    <!-- Cart Messages -->
+    <string name="added_to_cart">Producto agregado al carrito</string>
+    <string name="removed_from_cart">Producto eliminado del carrito</string>
+    <string name="cart_cleared">Carrito limpiado</string>
+    <string name="error_adding_to_cart">Error al agregar al carrito: %s</string>
+    <string name="error_updating_cart">Error al actualizar carrito: %s</string>
+    <string name="error_removing_from_cart">Error al eliminar del carrito: %s</string>
+    <string name="error_clearing_cart">Error al limpiar carrito: %s</string>
+
+    <!-- Checkout -->
+    <string name="checkout_title">Checkout</string>
+    <string name="customer_information">Información del Cliente</string>
+    <string name="shipping_information">Información de Envío</string>
+    <string name="payment_information">Información de Pago</string>
+    <string name="customer_name">Nombre Completo</string>
+    <string name="customer_email">Email</string>
+    <string name="customer_phone">Teléfono</string>
+    <string name="shipping_address">Dirección de Envío</string>
+    <string name="payment_method">Método de Pago</string>
+    <string name="btn_place_order">Realizar Pedido</string>
+    <string name="order_summary">Resumen del Pedido</string>
+
+    <!-- Payment Methods -->
+    <string name="payment_cash">Efectivo</string>
+    <string name="payment_card">Tarjeta de Crédito/Débito</string>
+    <string name="payment_transfer">Transferencia Bancaria</string>
+
+    <!-- Order -->
+    <string name="order_created_successfully">Pedido creado exitosamente</string>
+    <string name="error_creating_order">Error al crear pedido: %s</string>
+    <string name="error_loading_order">Error al cargar pedido: %s</string>
+    <string name="order_receipt_title">Recibo de Compra</string>
+    <string name="order_number">Número de Pedido:</string>
+    <string name="order_date">Fecha:</string>
+    <string name="order_status">Estado:</string>
+    <string name="customer_details">Detalles del Cliente</string>
+    <string name="shipping_details">Detalles de Envío</string>
+    <string name="payment_details">Detalles de Pago</string>
+
+
+
+</resources>

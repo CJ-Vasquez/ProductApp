@@ -1,0 +1,37 @@
+# Archivos de Android Studio
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Archivos de compilación
+/app/build/
+/gradle/wrapper/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+
+# Archivos de respaldo
+*.bak
+*~
+
+# Archivos del sistema
+Thumbs.db
+.DS_Store
+
+# Archivos de configuración específicos del entorno
+gradle.properties
+local.properties
