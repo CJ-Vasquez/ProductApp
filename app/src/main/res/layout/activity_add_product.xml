@@ -143,36 +143,7 @@
                             android:drawablePadding="12dp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Switch API -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="24dp"
-                        android:padding="12dp"
-                        android:background="@drawable/switch_background">
 
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/ic_cloud_sync"
-                            android:layout_marginEnd="12dp" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/switch_send_api"
-                            android:textSize="16sp"
-                            android:textColor="@color/text_primary_dark" />
-
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switchSendApi"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                    </LinearLayout>
 
                     <!-- Botón Guardar -->
                     <com.google.android.material.button.MaterialButton

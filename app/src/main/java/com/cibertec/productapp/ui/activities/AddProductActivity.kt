@@ -40,7 +40,7 @@ class AddProductActivity : AppCompatActivity() {
                         binding.etPrice.setText(p.price.toString())
                         binding.etCategory.setText(p.category)
                         binding.etDescription.setText(p.description)
-                        binding.switchSendApi.isChecked = p.isSynced
+
                     }
                 }
             }
@@ -51,7 +51,7 @@ class AddProductActivity : AppCompatActivity() {
             val priceStr = binding.etPrice.text?.toString()?.trim() ?: ""
             val category = binding.etCategory.text?.toString()?.trim() ?: ""
             val description = binding.etDescription.text?.toString()?.trim() ?: ""
-            val sendToApi = binding.switchSendApi.isChecked
+
 
             if (TextUtils.isEmpty(title)) {
                 binding.tilTitle.error = getString(R.string.error_title_required)
@@ -81,9 +81,9 @@ class AddProductActivity : AppCompatActivity() {
                     price = price,
                     description = description,
                     category = if (category.isEmpty()) "" else category,
-                    isSynced = editingProduct!!.isSynced || sendToApi
+                    isSynced = editingProduct!!.isSynced
                 )
-                viewModel.updateProduct(updated, updateOnApi = sendToApi && updated.apiId != null)
+                viewModel.updateProduct(updated, updateOnApi = false)
                 android.widget.Toast.makeText(this, getString(R.string.product_updated), android.widget.Toast.LENGTH_SHORT).show()
             } else {
                 val product = ProductEntity(
@@ -95,7 +95,7 @@ class AddProductActivity : AppCompatActivity() {
                     isSynced = false
                 )
 
-                viewModel.addProductLocal(product, sendToApi)
+                viewModel.addProductLocal(product, false)
                 android.widget.Toast.makeText(this, getString(R.string.product_saved), android.widget.Toast.LENGTH_SHORT).show()
             }
 

@@ -8,7 +8,7 @@
     <string name="btn_view_products">Ver Lista de Productos</string>
     <string name="welcome_title">Bienvenido a ProductApp</string>
     <string name="welcome_subtitle">Gestiona tus productos de manera fácil y eficiente</string>
-    <string name="app_description">Conecta con FakeStore API • Gestión local • Interfaz moderna</string>
+    <string name="app_description">Conecta con FakeStore API • Gestión local</string>
 
     <!-- AddProductActivity -->
     <string name="add_product_title">Agregar/Editar Producto</string>
@@ -16,7 +16,7 @@
     <string name="hint_price">Precio</string>
     <string name="hint_category">Categoría</string>
     <string name="hint_description">Descripción</string>
-    <string name="switch_send_api">Enviar a API (opcional)</string>
+
     <string name="btn_save">Guardar</string>
     <string name="error_title_required">Título obligatorio</string>
     <string name="error_price_invalid">Precio inválido</string>
