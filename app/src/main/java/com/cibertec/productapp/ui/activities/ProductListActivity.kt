@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cibertec.productapp.R
 import com.cibertec.productapp.databinding.ActivityProductListBinding
+import com.cibertec.productapp.data.local.entity.ProductEntity
 import com.cibertec.productapp.ui.adapter.ProductAdapter
 import com.cibertec.productapp.ui.viewmodel.ProductViewModel
 import com.cibertec.productapp.ui.viewmodel.CartViewModel
@@ -50,6 +51,10 @@ class ProductListActivity : AppCompatActivity() {
                     productPrice = product.price,
                     productImage = product.image
                 )
+            },
+            onDeleteClick = { product ->
+                // Mostrar diálogo de confirmación
+                showDeleteConfirmationDialog(product)
             }
         )
 
@@ -109,5 +114,16 @@ class ProductListActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun showDeleteConfirmationDialog(product: ProductEntity) {
+        androidx.appcompat.app.AlertDialog.Builder(this)
+            .setTitle(getString(R.string.confirm_delete_title))
+            .setMessage(getString(R.string.confirm_delete_message))
+            .setPositiveButton(getString(R.string.btn_delete_confirm)) { _, _ ->
+                viewModel.deleteProduct(product)
+            }
+            .setNegativeButton(getString(R.string.btn_cancel), null)
+            .show()
     }
 }

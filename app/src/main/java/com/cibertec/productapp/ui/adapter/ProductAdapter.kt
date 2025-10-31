@@ -15,7 +15,8 @@ import com.cibertec.productapp.databinding.ItemProductBinding
 class ProductAdapter(
     private var items: List<ProductEntity> = emptyList(),
     private val onItemClick: (ProductEntity) -> Unit,
-    private val onAddToCartClick: ((ProductEntity) -> Unit)? = null
+    private val onAddToCartClick: ((ProductEntity) -> Unit)? = null,
+    private val onDeleteClick: ((ProductEntity) -> Unit)? = null
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     fun setItems(newItems: List<ProductEntity>) {
@@ -73,6 +74,15 @@ class ProductAdapter(
                 binding.btnAddToCart.setOnClickListener {
                     try {
                         onAddToCartClick?.invoke(product)
+                    } catch (e: Exception) {
+                        // Log del error pero no crash
+                    }
+                }
+
+                // Botón eliminar producto
+                binding.btnDeleteProduct.setOnClickListener {
+                    try {
+                        onDeleteClick?.invoke(product)
                     } catch (e: Exception) {
                         // Log del error pero no crash
                     }

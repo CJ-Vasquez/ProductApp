@@ -61,7 +61,12 @@ class ProductDetailActivity : AppCompatActivity() {
             }
         }
 
-
+        // Botón eliminar
+        binding.btnDelete.setOnClickListener {
+            currentProduct?.let { product ->
+                showDeleteConfirmationDialog(product)
+            }
+        }
 
         // Botón agregar al carrito
         binding.btnAddToCart.setOnClickListener {
@@ -101,5 +106,18 @@ class ProductDetailActivity : AppCompatActivity() {
         } else {
             binding.ivProduct.setImageResource(R.drawable.ic_store_main)
         }
+    }
+
+    private fun showDeleteConfirmationDialog(product: ProductEntity) {
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.confirm_delete_title))
+            .setMessage(getString(R.string.confirm_delete_message))
+            .setPositiveButton(getString(R.string.btn_delete_confirm)) { _, _ ->
+                viewModel.deleteProduct(product)
+                // Cerrar la actividad después de eliminar
+                finish()
+            }
+            .setNegativeButton(getString(R.string.btn_cancel), null)
+            .show()
     }
 }
